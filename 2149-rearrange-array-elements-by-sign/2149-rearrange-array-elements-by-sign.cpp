@@ -2,13 +2,10 @@ class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         vector<int> a,b;
-        for(int i=0;i<nums.size();i++)
-        {
-            if(nums[i] >= 0){
-                a.push_back(nums[i]);
-            }else{
-                 b.push_back(nums[i]);
-            }
+        for(auto it: nums){
+            if(it >= 0) a.push_back(it);
+            else 
+                b.push_back(it);
         }
         vector<int> ans;
         for(int i=0;i<a.size();i++){
