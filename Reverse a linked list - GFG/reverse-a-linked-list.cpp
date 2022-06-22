@@ -38,14 +38,14 @@ class Solution
         // code here
         // return head of reversed list
         struct Node *prev, *next , *curr;
-        prev = NULL;
-        next = curr = head;
-        while(next != NULL){
-            next = next->next;
+        prev = NULL;curr = head;
+        while(curr != NULL){
+            next = curr->next;
             curr->next = prev;
             prev = curr;
             curr = next;
         }
+        head = prev;
         return prev;
     }
     
