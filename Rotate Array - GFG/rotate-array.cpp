@@ -10,18 +10,23 @@ class Solution{
     //Function to rotate an array by d elements in counter-clockwise direction. 
     void rotateArr(int arr[], int d, int n){
         // code here
-        if(d<n){
-            reverse(arr+d,arr+n);
-            reverse(arr,arr+d);
-            reverse(arr,arr+n);
-        }else{
-            if(d>n){
-                d = d-n;
-                reverse(arr+d,arr+n);
-                reverse(arr,arr+d);
-                reverse(arr,arr+n);
-            }
-        }
+        // if(d<n){
+        //     reverse(arr+d,arr+n);
+        //     reverse(arr,arr+d);
+        //     reverse(arr,arr+n);
+        // }else{
+        //     if(d>n){
+        //         d = d-n;
+        //         reverse(arr+d,arr+n);
+        //         reverse(arr,arr+d);
+        //         reverse(arr,arr+n);
+        //     }
+        // }
+        d = d%n;
+        reverse(arr,arr+d);
+        reverse(arr+d,arr+n);
+        reverse(arr,arr+n);
+        
     }
 };
 
