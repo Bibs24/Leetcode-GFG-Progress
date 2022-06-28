@@ -10,11 +10,7 @@ class Solution{
         // Your code goes here
         sort(A,A+N);
         //4,8,10,12,14,20,22
-        long long sum = 0;
-        for(long long i=K1;i<K2-1;i++){
-            sum += A[i];
-        }
-        return sum;
+        return accumulate(A+K1,A+K2-1,0);
     }
 };
 
