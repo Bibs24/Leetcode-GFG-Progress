@@ -1,2 +1,2 @@
-# Leetcode-Progress
+# Leetcode + GFG Progress
 
