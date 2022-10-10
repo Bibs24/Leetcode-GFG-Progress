@@ -10,7 +10,7 @@ public:
                 return palindrome;
             }
         }
-        palindrome[n-1] = 'b';
+        palindrome[n-1] = palindrome[n-1]+1;
         return palindrome;
     }
 };
